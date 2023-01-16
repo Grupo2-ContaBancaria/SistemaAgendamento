@@ -1,0 +1,15 @@
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.csproj.AssemblyReference.cache
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.AssemblyInfoInputs.cache
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.AssemblyInfo.cs
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.csproj.CoreCompileInputs.cache
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\bin\Debug\net6.0\sistemaDeAgendamento.exe
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\bin\Debug\net6.0\sistemaDeAgendamento.deps.json
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\bin\Debug\net6.0\sistemaDeAgendamento.runtimeconfig.json
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\bin\Debug\net6.0\sistemaDeAgendamento.dll
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\bin\Debug\net6.0\sistemaDeAgendamento.pdb
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.dll
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\refint\sistemaDeAgendamento.dll
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.pdb
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\sistemaDeAgendamento.genruntimeconfig.cache
+C:\Users\rishi\source\repos\Grupo2-SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\obj\Debug\net6.0\ref\sistemaDeAgendamento.dll
