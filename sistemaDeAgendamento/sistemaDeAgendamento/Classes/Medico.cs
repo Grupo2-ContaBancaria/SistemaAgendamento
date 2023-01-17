@@ -16,5 +16,9 @@ namespace sistemaDeAgendamento.Classes
         // cada médico tem sua especialidade
         public string especialidade { get; set; }
 
+        //dados do médico
+        public string nomeMedico { get; set; }
+        public int CRM { get; set; }
+
     }
 }
