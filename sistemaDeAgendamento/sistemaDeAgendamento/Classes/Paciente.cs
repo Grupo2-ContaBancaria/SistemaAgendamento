@@ -8,5 +8,6 @@ namespace sistemaDeAgendamento.Classes
 {
     public class Paciente
     {
+        public string Nome { get; set; }
     }
 }

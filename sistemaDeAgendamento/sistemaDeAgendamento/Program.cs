@@ -23,7 +23,10 @@ namespace sistemaDeAgendamento
 
                 if (retorno == 1)
                 {
+                    var usuario = new Services.NovoPaciente();
+                    usuario.IniciarNovoPerfil();
 
+                    Services.MenuInicial.MostrarAlternativas();
 
 
                 }
