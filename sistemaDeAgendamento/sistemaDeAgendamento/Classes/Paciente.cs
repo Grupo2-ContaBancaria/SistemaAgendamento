@@ -27,5 +27,6 @@ namespace sistemaDeAgendamento.Classes
             }
             return true;
         }
+        public string Nome { get; set; }
     }
 }

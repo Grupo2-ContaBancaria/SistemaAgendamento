@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace sistemaDeAgendamento.Metodos
 {
-    public class Especialidade
+    public class Especialidade_Metodos
     {
         public List<Classes.Especialidades> LstEspecialidades { get; set; } = new();
 
-        public Especialidade()
+        public Especialidade_Metodos()
         {   
             //
             LstEspecialidades.Add(new Classes.Especialidades() { Id = 1, Nome = "Cardiologia" });

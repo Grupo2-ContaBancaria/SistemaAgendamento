@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace sistemaDeAgendamento.Metodos
 {
-    public class Calendario
+    public class Calendario_Metodos
     {
         public List<Classes.Calendario> LstCalendarios { get; set; }
 
-        public Calendario()
+        public Calendario_Metodos()
         {
             var hora = 8;
             var data = 1;
