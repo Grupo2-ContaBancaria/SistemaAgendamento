@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace sistemaDeAgendamento.Metodos
 {
-    public class Agenda
+    public class Agenda_Metodos
     {
         public List<Classes.Agenda> LstAgenda { get; set; } = new();
 
