@@ -91,10 +91,18 @@ namespace sistemaDeAgendamento.Metodos
 
         public void ListarAgendamentos()
         {
-            foreach (var item in LstAgenda)
+            if(LstAgenda.Count == 0)
             {
-                Exibir(item);
+                Console.WriteLine("Não há Consultas Agendadas");
             }
+            else
+            {
+                foreach (var item in LstAgenda)
+                {
+                    Exibir(item);
+                }
+            }
+            
             Console.WriteLine("Pressione qualquer tecla para retornar ao Menu Inicial");
         }
 
