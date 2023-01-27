@@ -14,9 +14,9 @@ namespace sistemaDeAgendamento.Services
 
 
         private readonly IUsuario? _iusuario;
-        public LoginUsuario()
+        public LoginUsuario(Usuario_Metodo usuario_Metodo)
         {
-            _iusuario = new Usuario_Metodo();
+            _iusuario = usuario_Metodo;
         }
         //acoplamento
 

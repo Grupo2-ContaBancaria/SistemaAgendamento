@@ -25,12 +25,13 @@ namespace sistemaDeAgendamento
 
                 if (retorno == 1)
                 {
+                    //Injeção de dependencia via construtor
                     Usuario usuario = new Services.NovoUsuario(new Usuario_Metodo()).IniciarNovoPerfil();
                 }
                 else if (retorno == 2)
                 {
-                    var usuario = new Services.LoginUsuario();
-                    usuario.LogarUsuario();
+                    Usuario usuario = new Services.LoginUsuario(new Usuario_Metodo()).LogarUsuario();
+                    
 
                 }
                 while (true)
