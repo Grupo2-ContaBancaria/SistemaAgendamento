@@ -14,17 +14,17 @@ namespace sistemaDeAgendamento.Metodos
         public Usuario Cadastrar()
         {
 
-            var Nome = Services.ValidarEConverterEntradaDeUsuario.ColetarNomeCompleto();
+            string Nome = Services.ValidarEConverterEntradaDeUsuario.ColetarNomeCompleto();
 
             Console.WriteLine("Digite seu CPF:");
-            var CPF = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLong();
+           long CPF = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLong();
 
             Console.WriteLine("Digite seu numero de Telefone Celular: ");
-            var Celular = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLongCelular();
+            long Celular = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLongCelular();
 
            
             Console.WriteLine("Informe sua Data de Nascimento: (dia/mês/ano):");
-            var Data_Nascimento = Services.ValidarEConverterEntradaDeUsuario.ConverterParaDateTime();
+            DateTime Data_Nascimento = Services.ValidarEConverterEntradaDeUsuario.ConverterParaDateTime();
             
 
             return new Usuario(Nome, CPF, Data_Nascimento, Celular);

@@ -10,7 +10,7 @@ namespace sistemaDeAgendamento.Entidades
     {
         public string Nome { get; protected set; }
         public long CPF { get; protected set; }
-        public DateTime Data_Nascimento { get; protected set; }
+        public DateTime Data_Nascimento { get; protected set; } 
         public long Celular { get; protected set; }
         
 
@@ -33,5 +33,8 @@ namespace sistemaDeAgendamento.Entidades
 
 
         }
+
+        
+        
     }
 }
