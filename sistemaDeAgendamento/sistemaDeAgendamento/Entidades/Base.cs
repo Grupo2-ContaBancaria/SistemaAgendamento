@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sistemaDeAgendamento.Classes
+namespace sistemaDeAgendamento.Entidades
 {
     public abstract class Base
     {
