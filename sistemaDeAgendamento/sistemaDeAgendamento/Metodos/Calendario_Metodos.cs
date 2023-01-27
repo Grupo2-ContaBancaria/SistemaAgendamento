@@ -17,7 +17,7 @@ namespace sistemaDeAgendamento.Metodos
         public Calendario_Metodos()
         {
             //leitura do arquivo
-            string path = @"C:\Users\rishi\source\repos\SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\agenda.txt";
+            string path = @"C:\Users\User\Desktop\ESTUDOS\LETSCODE_C#\agendamento\sistemaDeAgendamento\sistemaDeAgendamento\agenda.txt";
             using (StreamReader sr = File.OpenText(path))
             {
 

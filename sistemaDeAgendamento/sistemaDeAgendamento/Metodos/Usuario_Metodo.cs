@@ -19,8 +19,8 @@ namespace sistemaDeAgendamento.Metodos
             Console.WriteLine("Digite seu CPF:");
            long CPF = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLong();
 
-            Console.WriteLine("Digite seu numero de Telefone Celular: ");
-            long Celular = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLongCelular();
+            Console.WriteLine("Digite seu numero de Telefone Celular com DDD: ");
+            var Celular = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLongCelular();
 
            
             Console.WriteLine("Informe sua Data de Nascimento: (dia/mês/ano):");
