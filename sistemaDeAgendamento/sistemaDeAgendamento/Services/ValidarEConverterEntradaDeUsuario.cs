@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sistemaDeAgendamento.Services
 {
-   public class ValidarEConverterEntradasDeUsuarios
+   public class ValidarEConverterEntradaDeUsuario
     {
         public static int ConverterParaNumero()
         {

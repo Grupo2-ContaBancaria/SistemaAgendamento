@@ -1,43 +1,72 @@
-﻿using System;
+﻿using sistemaDeAgendamento.Entidades;
+using sistemaDeAgendamento.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace sistemaDeAgendamento.Metodos
 {
     public class Calendario_Metodos
+
     {
-        public List<Classes.Calendario> LstCalendarios { get; set; }
+        public List<Entidades.Calendario> LstCalendarios { get; set; } = new();
 
         public Calendario_Metodos()
         {
-            var hora = 8;
-            var data = 1;
-            var random = new Random();
-
-            // o 15 representa a quantidade de medicos cadastrados, preciso alterar quandoo tiver a qdt exata
-            for (int i = 1; i <= 15; i++)
+            //leitura do arquivo
+            string path = @"C:\Users\rishi\source\repos\SistemaAgendamento\sistemaDeAgendamento\sistemaDeAgendamento\agenda.txt";
+            using (StreamReader sr = File.OpenText(path))
             {
-                if (hora > 16)
+
+                while (!sr.EndOfStream)
                 {
-                    hora = 8;
-                    data++;
+                    LstCalendarios.Add(new Entidades.Calendario(sr.ReadLine()));
                 }
 
-                LstCalendarios.Add(
-                    new Classes.Calendario()
-                    {
-                        Id = i,
-                        Data = DateTime.Now.AddDays(data).ToString("dd/MM/YYYY"),
-                        Hora = new DateTime(2023, 12, 1, hora, 0, 0).AddHours(i).ToString("HH:mm"),
-                        Situacao = "l",
-                        MedicoId = random.Next(1, 42)
-                    });
-
-                hora++;
 
             }
         }
+        public void ExibirCalendario(int idMedicoEscolhido)
+        {
+            var cabecalho = "Verifique agenda disponivel e indique o dia e horaraio que deseja agendar sua consulta: ";
+            var corpo = "";
+
+            List<Entidades.Calendario> listaFiltrada = LstCalendarios.FindAll(x => x.MedicoId == idMedicoEscolhido);
+
+
+            foreach (var item in listaFiltrada)
+            {
+                corpo += $"Código: {item.Id}---- Data:{item.Data} ---- Hora:{item.Hora} {Environment.NewLine}";
+            }
+
+
+            Console.WriteLine(cabecalho);
+            Console.WriteLine(corpo);
+
+
+        }
+
+        public Calendario ColetarCalendario(int idMedico)
+        {
+            int retorno = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
+
+            var resultado = LstCalendarios.Where(x => x.Id == retorno).FirstOrDefault();
+
+            if (resultado == null)
+            {
+                Console.WriteLine("Opção Inválida!");
+                ExibirCalendario(idMedico);
+            }
+
+            return resultado;
+            //esse retorno aqui tenho que mandar pra agenda metodo
+        }
+
+
     }
 }
+
+        

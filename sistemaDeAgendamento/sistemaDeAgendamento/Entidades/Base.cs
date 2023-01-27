@@ -4,17 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sistemaDeAgendamento.Classes
+namespace sistemaDeAgendamento.Entidades
 {
-    public class Medico: Base
+    public abstract class Base
     {
         public int Id { get; set; }
         public DateTime DataCriacao { get; set; } = DateTime.Now;
 
-        public bool Status { get; set; }
-
-        // cada médico tem sua especialidade
-        public string especialidade { get; set; }
-
+        public bool Status { get; set; } = true;
     }
 }

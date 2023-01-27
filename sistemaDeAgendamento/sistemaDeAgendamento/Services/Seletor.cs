@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using sistemaDeAgendamento.Metodos;
+using sistemaDeAgendamento.Services;
 
 namespace sistemaDeAgendamento.Services
 {
-    public class MenuInicial
+    public class Seletor
     {
         public static List<string> Alternativas { get; set; } = new List<string>() { "Novo Agendamento", "Verificar Agendamentos Realizados", "Sair" };
 
@@ -22,15 +24,13 @@ namespace sistemaDeAgendamento.Services
             }
 
             Console.WriteLine(descricaoMenu);
-            EscolherMenu();
-            ConfiguracaoLayout.LayoutDoConsole();
 
         }
 
         //METODO QUE VERIFICA SE A OPÇÃO DIGITADA NO MENU EXISTE NAS ALTERNATIVAS LISTADAS
-        private static string EscolherMenu()
+        public static string EscolherMenu()
         {
-            int retorno = ValidarEConverterEntradasDeUsuarios.ConverterParaNumero();
+            int retorno = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
             bool itemExiste = retorno <= Alternativas.Count;
 
             if (itemExiste)
@@ -43,7 +43,31 @@ namespace sistemaDeAgendamento.Services
                 Console.WriteLine("Menu não existe, por favor escolha um número válido.");
                 return EscolherMenu();
             }
-            //ConfiguraLayout.LayoutDoConsole();
+
         }
+        public static void IniciarSessaoPosEscolha(string alternativaEscolhida, Agenda_Metodos agenda_Metodo)
+        {
+            switch (alternativaEscolhida)
+            {
+                case "Novo Agendamento":
+                    agenda_Metodo.CriarAgendamento();
+                    break;
+
+                case "Verificar Agendamentos Realizados":
+                    agenda_Metodo.ListarAgendamentos();
+                    Console.ReadKey();
+                    break;
+
+                case "Sair":
+                    Environment.Exit(0);
+                    break;
+
+
+                default:
+                    break;
+            }
+
+        }
+
     }
 }

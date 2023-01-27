@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sistemaDeAgendamento.Classes
+namespace sistemaDeAgendamento.Services
 {
-    public class Paciente
+    internal class Historico_Consultas
     {
-        public string Nome { get; set; }
     }
 }

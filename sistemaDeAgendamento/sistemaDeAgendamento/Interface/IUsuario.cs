@@ -1,4 +1,4 @@
-﻿using sistemaDeAgendamento.Classes;
+﻿using sistemaDeAgendamento.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace sistemaDeAgendamento.Interface
 {
-    public interface IPaciente
+    public interface IUsuario
     {
-        Paciente Cadastrar();
+        Usuario Cadastrar();
         void ExibirMensagemBoasVindas(string Nome);
+        Usuario LogarUsuario();
     }
 }

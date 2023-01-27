@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sistemaDeAgendamento.Services
 {
-    public class ConfiguracaoLayout
+    public class ConfiguraLayout
     {
         public static void LayoutDoConsole()
         {
@@ -16,9 +16,9 @@ namespace sistemaDeAgendamento.Services
 
             Console.Clear();
 
-            Console.WriteLine("--------------------------------");
-            Console.WriteLine("------- 《 Agedamento de Consulta 》 ------");
-            Console.WriteLine("-------------(☼ ☼ ☼)-------------");
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine(" ------ 《 Agendamento de Consulta 》 ------");
+            Console.WriteLine("--------------------(☼ ☼ ☼)-----------------");
 
         }
 
