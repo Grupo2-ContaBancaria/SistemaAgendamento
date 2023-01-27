@@ -9,7 +9,7 @@ using sistemaDeAgendamento.Entidades;
 
 namespace sistemaDeAgendamento.Metodos
 {
-    public class Usuario_Metodo:IUsuario
+    public class Usuario_Metodo : IUsuario
     {
         public Usuario Cadastrar()
         {

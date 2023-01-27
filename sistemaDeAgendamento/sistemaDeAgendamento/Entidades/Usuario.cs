@@ -20,7 +20,8 @@ namespace sistemaDeAgendamento.Entidades
             CPF = cpf;
             Data_Nascimento = data_nascimento;
             Celular = celular;
-            
+            Id = new Random().Next();
+
         }
         public Usuario(string nome, long cpf, DateTime data_nascimento, long celular, int senha)
         {
@@ -28,7 +29,8 @@ namespace sistemaDeAgendamento.Entidades
             CPF = cpf;
             Data_Nascimento = data_nascimento;
             Celular = celular;
-            
+            Id=  new Random().Next();
+
 
         }
     }

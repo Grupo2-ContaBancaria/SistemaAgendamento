@@ -14,8 +14,8 @@ namespace sistemaDeAgendamento.Services
             var tipo = obj.GetType();
 
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("Log do " + tipo.Name);
-            builder.AppendLine("Data: " + DateTime.Now);
+            builder.AppendLine("Dados do " + tipo.Name);
+            builder.AppendLine("Data de cadastro: " + DateTime.Now);
             foreach (var prop in tipo.GetProperties())
             {
                 

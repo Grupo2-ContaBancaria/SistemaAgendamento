@@ -10,6 +10,7 @@ namespace sistemaDeAgendamento
         {
             Services.ConfiguraLayout.LayoutDoConsole();
             Agenda_Metodos agenda_Metodo = new Agenda_Metodos();
+
             try
             {
                 int retorno = 0;
@@ -23,15 +24,17 @@ namespace sistemaDeAgendamento
 
                 } while (retorno < 1 || retorno > 2);
 
+                UsuarioService usuarioService = new Services.UsuarioService(new Usuario_Metodo());
+
                 if (retorno == 1)
                 {
                     //Injeção de dependencia via construtor
-                    Usuario usuario = new Services.NovoUsuario(new Usuario_Metodo()).IniciarNovoPerfil();
+                    Usuario usuario = usuarioService.IniciarNovoPerfil();
                     Log.LogarUsandoReflection(usuario);
                 }
                 else if (retorno == 2)
                 {
-                    Usuario usuario = new Services.LoginUsuario(new Usuario_Metodo()).LogarUsuario();
+                    Usuario usuario = usuarioService.LogarUsuario();
                     Log.LogarUsandoReflection(usuario);
 
                 }

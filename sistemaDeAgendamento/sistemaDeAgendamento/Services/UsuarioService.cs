@@ -10,20 +10,28 @@ using sistemaDeAgendamento.Entidades;
 
 namespace sistemaDeAgendamento.Services
 {
-    public class NovoUsuario
+    public class UsuarioService
     {
 
         private readonly IUsuario? _iusuario;
 
-        public NovoUsuario(Usuario_Metodo usuario_Metodo)
+        public UsuarioService(IUsuario iusuario)
         {
-            _iusuario = usuario_Metodo;
+            _iusuario = iusuario;
         }
         public Usuario IniciarNovoPerfil()
         {
             var usuarioCriado = _iusuario.Cadastrar();
             _iusuario.ExibirMensagemBoasVindas(usuarioCriado.Nome);
             return usuarioCriado;
+        }
+
+        public Usuario LogarUsuario()
+        {
+            var usuarioExistente = _iusuario.LogarUsuario();
+            _iusuario.ExibirMensagemBoasVindas(usuarioExistente.Nome);
+            return usuarioExistente;
+            ;
         }
 
     }
