@@ -12,24 +12,23 @@ namespace sistemaDeAgendamento.Entidades
         public long CPF { get; protected set; }
         public DateTime Data_Nascimento { get; protected set; }
         public long Celular { get; protected set; }
-        public int Sexo { get; protected set; }
+        
 
-        public Usuario(string nome, long cpf, DateTime data_nascimento, long celular, int sexo)
+        public Usuario(string nome, long cpf, DateTime data_nascimento, long celular)
         {
             Nome = nome;
             CPF = cpf;
             Data_Nascimento = data_nascimento;
             Celular = celular;
-            Sexo = sexo;
-
+            
         }
-        public Usuario(string nome, long cpf, DateTime data_nascimento, long celular, int sexo, int senha)
+        public Usuario(string nome, long cpf, DateTime data_nascimento, long celular, int senha)
         {
             Nome = nome;
             CPF = cpf;
             Data_Nascimento = data_nascimento;
             Celular = celular;
-            Sexo = sexo;
+            
 
         }
     }

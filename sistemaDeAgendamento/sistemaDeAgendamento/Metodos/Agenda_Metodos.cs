@@ -1,5 +1,6 @@
 ﻿
 using sistemaDeAgendamento.Entidades;
+using sistemaDeAgendamento.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,8 +92,10 @@ namespace sistemaDeAgendamento.Metodos
             {
                 Exibir(item);
             }
-
+                        
         }
+
+      
 
     }
 }

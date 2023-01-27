@@ -22,13 +22,12 @@ namespace sistemaDeAgendamento.Metodos
             Console.WriteLine("Digite seu numero de Telefone Celular: ");
             var Celular = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLongCelular();
 
-            Console.WriteLine("informe seu genero (1) Feminino (2) Masculino:");
-            var Sexo = Services.ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
-
+           
             Console.WriteLine("Informe sua Data de Nascimento: (dia/mês/ano):");
             var Data_Nascimento = Services.ValidarEConverterEntradaDeUsuario.ConverterParaDateTime();
+            
 
-            return new Usuario(Nome, CPF, Data_Nascimento, Celular, Sexo);
+            return new Usuario(Nome, CPF, Data_Nascimento, Celular);
 
 
         }
@@ -55,7 +54,7 @@ namespace sistemaDeAgendamento.Metodos
             var senha = Services.ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
 
 
-            return new Usuario("Michael Oliveira", CPF, new DateTime(1987, 01, 12), 3196307731, 'M', senha);
+            return new Usuario("Michael Oliveira", CPF, new DateTime(1987, 01, 12), 3196307731, senha);
 
         }
 
