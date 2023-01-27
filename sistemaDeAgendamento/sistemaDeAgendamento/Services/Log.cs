@@ -11,6 +11,7 @@ namespace sistemaDeAgendamento.Services
     {
         public static void InformacaoLog(object obj)
         {
+            //Uso do Reflection para exibir os dados da classe Usuario
             var tipo = obj.GetType();
 
             StringBuilder builder = new StringBuilder();

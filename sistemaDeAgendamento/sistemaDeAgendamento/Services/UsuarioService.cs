@@ -12,7 +12,7 @@ namespace sistemaDeAgendamento.Services
 {
     public class UsuarioService
     {
-
+        //Uso da Interface para cadastrar e exibir msg de boas vindas
         private readonly IUsuario? _iusuario;
 
         public UsuarioService(IUsuario iusuario)

@@ -24,11 +24,12 @@ namespace sistemaDeAgendamento
 
                 } while (retorno < 1 || retorno > 2);
 
+                //Injeção de dependencia via construtor
                 UsuarioService usuarioService = new Services.UsuarioService(new Usuario_Metodo());
 
                 if (retorno == 1)
                 {
-                    //Injeção de dependencia via construtor
+                    
                     Usuario usuario = usuarioService.IniciarNovoPerfil();
                     Log.LogarUsandoReflection(usuario);
                 }
