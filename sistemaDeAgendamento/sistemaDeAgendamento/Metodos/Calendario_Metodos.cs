@@ -13,7 +13,7 @@ namespace sistemaDeAgendamento.Metodos
 
     {
         public List<Entidades.Calendario> LstCalendarios { get; set; } = new();
-
+        List<Entidades.Calendario> listaFiltrada;
         public Calendario_Metodos()
         {
             //leitura do arquivo
@@ -34,7 +34,7 @@ namespace sistemaDeAgendamento.Metodos
             var cabecalho = "Verifique agenda disponivel e indique o dia e horaraio que deseja agendar sua consulta: ";
             var corpo = "";
 
-            List<Entidades.Calendario> listaFiltrada = LstCalendarios.FindAll(x => x.MedicoId == idMedicoEscolhido);
+            listaFiltrada = LstCalendarios.FindAll(x => x.MedicoId == idMedicoEscolhido && x.Status == true);
 
 
             foreach (var item in listaFiltrada)
@@ -53,16 +53,26 @@ namespace sistemaDeAgendamento.Metodos
         {
             int retorno = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
 
-            var resultado = LstCalendarios.Where(x => x.Id == retorno).FirstOrDefault();
+            var resultado = listaFiltrada.Where(x => x.Id == retorno).FirstOrDefault();
 
             if (resultado == null)
             {
                 Console.WriteLine("Opção Inválida!");
                 ExibirCalendario(idMedico);
+                return ColetarCalendario(idMedico);
             }
 
             return resultado;
             //esse retorno aqui tenho que mandar pra agenda metodo
+        }
+
+        public  void ExcluirCalendarioAgendado(Calendario calendarioUsado)
+        {
+            var index = LstCalendarios.FindIndex(x => x.Id == calendarioUsado.Id);
+
+            calendarioUsado.Status = false;
+
+            LstCalendarios[index] = calendarioUsado;
         }
 
 

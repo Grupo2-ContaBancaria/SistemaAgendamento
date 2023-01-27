@@ -10,7 +10,7 @@ namespace sistemaDeAgendamento.Metodos
     public class Medicos_Metodo
     {
         public List<Entidades.Medicos> LstMedicos { get; set; } = new();
-
+        List<Entidades.Medicos> filtroMedico;
         public Medicos_Metodo()
         {
 
@@ -60,7 +60,7 @@ namespace sistemaDeAgendamento.Metodos
         }
         public void Filtro(int id_especialidade)
         {
-            var filtroMedico = LstMedicos.Where(x => x.Id_Especialidade == id_especialidade).ToList();
+           filtroMedico = LstMedicos.Where(x => x.Id_Especialidade == id_especialidade).ToList();
 
 
             ExibirEspecialidade(filtroMedico);
@@ -80,14 +80,14 @@ namespace sistemaDeAgendamento.Metodos
             Console.WriteLine("Escolha o médico ");
             int id = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
 
-            var resultado = LstMedicos.Where(x => x.Id == id).FirstOrDefault();
+            var resultado = filtroMedico.Where(x => x.Id == id).FirstOrDefault();
 
             if (resultado == null)
             {
                 Console.WriteLine("Opção Inválida!");
-                ColetarNomeMedico();
+                ExibirEspecialidade(filtroMedico);
+                return ColetarNomeMedico();
 
-                //ExibirEspecialidade();
             }
             return id;
             //esse retorno aqui tenho que mandar pra agenda metodo

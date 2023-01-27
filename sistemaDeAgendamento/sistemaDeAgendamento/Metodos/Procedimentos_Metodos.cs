@@ -17,7 +17,7 @@ namespace sistemaDeAgendamento.Metodos
             LstProcedimentos.Add(new Entidades.Procedimentos() { Id = 2, Tipo = "Exame", Valor = 200.00 });
             LstProcedimentos.Add(new Entidades.Procedimentos() { Id = 3, Tipo = "Cirurgia", Valor = 1000.00 });
         }
-        public int ExibirProcedimento()
+        public void ExibirProcedimento()
         {
             Services.ConfiguraLayout.ClearLayout();
             Services.ConfiguraLayout.LayoutDoConsole();
@@ -30,23 +30,23 @@ namespace sistemaDeAgendamento.Metodos
                 Console.WriteLine(descricaoMenu = $"({item.Id}) --- {item.Tipo}");
             }
 
-
-            int retorno = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
-            ColetarProcedimento(retorno);
-            return retorno;
+                     
+            
         }
-        public void ColetarProcedimento(int id)
+        public int ColetarProcedimento()
         {
-            int retorno = 0;
-            var resultado = LstProcedimentos.Where(x => x.Id == id).FirstOrDefault();
+            int retorno = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
+            
+            var resultado = LstProcedimentos.Where(x => x.Id == retorno).FirstOrDefault();
 
             if (resultado == null)
             {
                 Console.WriteLine("Opção Inválida!");
                 ExibirProcedimento();
+                return ColetarProcedimento();
             }
 
-
+            return retorno;
 
         }
     }

@@ -10,7 +10,7 @@ namespace sistemaDeAgendamento.Metodos
     public class Especialidade_Metodo
     {
         public List<Entidades.Especialidades> LstEspecialidades { get; set; } = new();
-
+        List<Entidades.Especialidades>filtroEspecialidades;
         public Especialidade_Metodo()
         {
             LstEspecialidades.Add(new Entidades.Especialidades() { Id = 1, PgtoConvenio = false, PgtoParticular = true, Nome = "Acupuntura", ProcedimentoId = 1 });
@@ -43,7 +43,7 @@ namespace sistemaDeAgendamento.Metodos
         public void Filtro(int id_procedimento, bool convenio, bool particular)
         {
             //onde x é a classe. classe tem a propriedade id que e usada para localizar o procedimento
-            var filtroEspecialidades = LstEspecialidades.Where(x => x.ProcedimentoId == id_procedimento && (x.PgtoConvenio == convenio || x.PgtoParticular == particular)).ToList();
+           filtroEspecialidades = LstEspecialidades.Where(x => x.ProcedimentoId == id_procedimento && (x.PgtoConvenio == convenio || x.PgtoParticular == particular)).ToList();
 
             ExibirEspecialidade(filtroEspecialidades);
         }
@@ -62,13 +62,12 @@ namespace sistemaDeAgendamento.Metodos
             Console.WriteLine("Escolha uma especialidade: ");
             int id = ValidarEConverterEntradaDeUsuario.ConverterParaNumero();
 
-            var resultado = LstEspecialidades.Where(x => x.Id == id).FirstOrDefault();
+            var resultado = filtroEspecialidades.Where(x => x.Id == id).FirstOrDefault();
 
             if (resultado == null)
             {
                 Console.WriteLine("Opção Inválida!");
-                ColetarEspecialidade();
-                //ExibirEspecialidade();
+                return ColetarEspecialidade();
             }
             return id;
             //esse retorno aqui tenho que mandar pra agenda metodo

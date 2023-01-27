@@ -30,7 +30,8 @@ namespace sistemaDeAgendamento.Metodos
 
             int id_formaPgto = usuario_pgto.ExibirFormaPgto();
 
-            int escolhaProcedimento = usuario_procedimento.ExibirProcedimento();
+            usuario_procedimento.ExibirProcedimento();
+            int escolhaProcedimento =usuario_procedimento.ColetarProcedimento();
 
             usuario_especialidade.Filtro(escolhaProcedimento, id_formaPgto == 1, id_formaPgto == 2);
             int id_Especialidade = usuario_especialidade.ColetarEspecialidade();
@@ -50,12 +51,14 @@ namespace sistemaDeAgendamento.Metodos
             novoAgendamento.Id_Especialidade = id_Especialidade;
             novoAgendamento.Id_Medico = id_Medico;
             novoAgendamento.Id_Calendario = diaEHoraEscolhido.Id;
+            
 
             Gravar(novoAgendamento);
 
             var cabecalho = "Agendamento Realizado com Sucesso!!!";
             Console.WriteLine(cabecalho);
             Exibir(novoAgendamento);
+            usuario_calendario.ExcluirCalendarioAgendado(diaEHoraEscolhido);
             Console.WriteLine("Pressione qualquer tecla para retornar ao Menu Inicial");
             Console.ReadKey();
         }
@@ -83,7 +86,7 @@ namespace sistemaDeAgendamento.Metodos
 
             Console.WriteLine(corpo);
 
-
+            
         }
 
         public void ListarAgendamentos()
@@ -92,7 +95,7 @@ namespace sistemaDeAgendamento.Metodos
             {
                 Exibir(item);
             }
-                        
+            Console.WriteLine("Pressione qualquer tecla para retornar ao Menu Inicial");
         }
 
       
