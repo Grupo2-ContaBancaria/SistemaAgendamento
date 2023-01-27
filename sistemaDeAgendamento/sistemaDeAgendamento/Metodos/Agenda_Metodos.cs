@@ -52,7 +52,7 @@ namespace sistemaDeAgendamento.Metodos
 
             Gravar(novoAgendamento);
 
-            var cabecalho = "Agendamento Realizado com Sucesso!!!\nDetalhes do agendamento";
+            var cabecalho = "Agendamento Realizado com Sucesso!!!";
             Console.WriteLine(cabecalho);
             Exibir(novoAgendamento);
             Console.WriteLine("Pressione qualquer tecla para retornar ao Menu Inicial");
@@ -75,7 +75,7 @@ namespace sistemaDeAgendamento.Metodos
             var horaConsulta = usuario_calendario.LstCalendarios.Find(x => x.Id == agenda.Id_Calendario).Hora;
             var corpo = "";
 
-            corpo += $"Procedimento: {nomeProcedimento}\n" +
+            corpo += $"\nDetalhes do agendamento\nProcedimento: {nomeProcedimento}\n" +
                 $"Especialidade:{nomeEspecialidade} ----  Medico:{nomeMedico}\n" +
                 $"Data :{diaConsulta} -- Horario:{horaConsulta}\n";
 
