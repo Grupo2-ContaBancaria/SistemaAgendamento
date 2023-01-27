@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace sistemaDeAgendamento.Services
 {
@@ -62,7 +63,7 @@ namespace sistemaDeAgendamento.Services
 
             if (tamanhoDaString != 11)
             {
-                Console.WriteLine("Você não digitou corretamente. Digite novamente:");
+                Console.WriteLine("Você não digitou corretamente. Digite novamente o CPF com 11 dígitos:");
                 ConverterParaLong();
             }
 
@@ -80,7 +81,7 @@ namespace sistemaDeAgendamento.Services
 
             if (!validador)
             {
-                Console.WriteLine("O valor digitado é inválido. Digite novamente:");
+                Console.WriteLine("O valor digitado é inválido. Digite novamente o CELULAR informando o DDD:");
                 return ConverterParaLong();
             }
 
@@ -93,7 +94,7 @@ namespace sistemaDeAgendamento.Services
 
             if (tamanhoDaString != 11)
             {
-                Console.WriteLine("Você não digitou corretamente. Digite novamente:");
+                Console.WriteLine("Você não digitou corretamente. Digite novamente informando o DDD:");
                 ConverterParaLongCelular();
             }
 

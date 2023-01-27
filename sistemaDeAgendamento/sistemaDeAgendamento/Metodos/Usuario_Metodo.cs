@@ -19,7 +19,7 @@ namespace sistemaDeAgendamento.Metodos
             Console.WriteLine("Digite seu CPF:");
             var CPF = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLong();
 
-            Console.WriteLine("Digite seu numero de Telefone Celular: ");
+            Console.WriteLine("Digite seu numero de Telefone Celular com DDD: ");
             var Celular = Services.ValidarEConverterEntradaDeUsuario.ConverterParaLongCelular();
 
            
